@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sp Tickets</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <aside class="side-nav" id="show-side-navigation1">
+      <div class="heading">
+        <img src="./img/guardiangris.png" alt="" />
+        <div class="info">
+          <h3><a href="#">Smart Process</a></h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+      </div>
+
+      <ul class="categories">
+        <li>
+          <i class="fa fa-home fa-fw" aria-hidden="true"></i
+          ><a href="index.html"> Inicio </a>
+        </li>
+
+        <li>
+            <i class="fas fa-plus"></i>
+            <a href="form.html"> Agregar nuevo </a>
+          </li>
+    
+        <li>
+            <i class="fas fa-eye"></i>
+          <a href="products.html"> Ver todos </a>
+        </li>
+        <li>
+            <i class="far fa-building fa-fw"></i>
+            <a href="empresas.html"> Ver Empresas </a>
+          </li>
+
+          <li>
+            <i class="fas fa-money-bill-alt fa-fw "></i>
+            <a href="ventas.html"> Ver Ventas </a>
+          </li>
+
+          <li>
+            <i class="fa fa-users fa-fw"></i><a href="tecnicos.html"> Tècnicos </a>
+          </li>
+        <li>
+            <i class="fas fa-tasks"></i>
+          <a href="#"> Tickets</a>
+          <ul class="side-nav-dropdown">
+            <li><a href="ticketsHistorial.html">Ver historial de Tickets</a></li>
+            <li><a href="ticketsOpen.html">Tickets Abiertos</a></li>
+            <li><a href="ticketsCerrados.html">Tickets Cerrados</a></li>
+          </ul>
+        </li>
+        <li>
+            <i class="fas fa-sign-out-alt"></i><a href="#"> Salir </a>
+        </li>
+    
+      </ul>
+    </aside>
+    <section id="contents" class="p-4">
+        <h3 class="text-center pt-2 text-white"> <strong>Empresas</strong> </h3>
+      <section class="statistics">
+        <div class="container-fluid">
+            <section class="statistics">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="data:image/png;base64,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" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                                </div>
+      
+                                <div class="col-8">
+                                  <div class="info">
+                                      <span>Triol Corp</span>
+                                      <p>Ingenieria Industrial</p>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="box">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="data:image/png;base64,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" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                                </div>
+      
+                                <div class="col-8">
+                                  <div class="info">
+                                      <span>PDVSA</span>
+                                      <p>Ingenieria Industrial</p>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="box">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                                </div>
+      
+                                <div class="col-8">
+                                  <div class="info">
+                                      <span>Smart Process</span>
+                                      <p>Ingenieria Industrial</p>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </section>
+
+          <section class="statistics">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="data:image/png;base64,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" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Kam Controls</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="data:image/png;base64,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" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="statistics">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="data:image/png;base64,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" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/Guardian 2.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/LOGO P3S.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="statistics">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="statistics">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/LOGO P3S.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="statistics pb-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="box">
+                      <div class="row">
+                          <div class="col-4">
+                              <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                          </div>
+
+                          <div class="col-8">
+                            <div class="info">
+                                <span>Smart Process</span>
+                                <p>Ingenieria Industrial</p>
+                              </div>
+                          </div>
+                      </div>
+                    
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/guardiangris.png" style="height: 50px; width: 50px; border-radius: 100%;" class="img-thumbnail" alt="">
+                            </div>
+  
+                            <div class="col-8">
+                              <div class="info">
+                                  <span>Smart Process</span>
+                                  <p>Ingenieria Industrial</p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

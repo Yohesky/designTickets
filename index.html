@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sp Tickets</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <aside class="side-nav" id="show-side-navigation1">
+      <div class="heading">
+        <img src="./img/guardiangris.png" alt="" />
+        <div class="info">
+          <h3><a href="#">Smart Process</a></h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+      </div>
+
+      <ul class="categories">
+        <li>
+          <i class="fa fa-home fa-fw" aria-hidden="true"></i
+          ><a href="index.html"> Inicio </a>
+        </li>
+
+        <li>
+            <i class="fas fa-plus"></i>
+            <a href="form.html"> Agregar nuevo </a>
+          </li>
+    
+        <li>
+            <i class="fas fa-eye"></i>
+          <a href="products.html"> Ver todos </a>
+        </li>
+        <li>
+            <i class="far fa-building fa-fw"></i>
+            <a href="empresas.html"> Ver Empresas </a>
+          </li>
+
+          <li>
+            <i class="fas fa-money-bill-alt fa-fw "></i>
+            <a href="ventas.html"> Ver Ventas </a>
+          </li>
+
+          <li>
+            <i class="fa fa-users fa-fw"></i><a href="tecnicos.html"> Tècnicos </a>
+          </li>
+        <li>
+            <i class="fas fa-tasks"></i>
+          <a href="#"> Tickets</a>
+          <ul class="side-nav-dropdown">
+            <li><a href="ticketsHistorial.html">Ver historial de Tickets</a></li>
+            <li><a href="ticketsOpen.html">Tickets Abiertos</a></li>
+            <li><a href="ticketsCerrados.html">Tickets Cerrados</a></li>
+          </ul>
+        </li>
+        <li>
+            <i class="fas fa-sign-out-alt"></i><a href="#"> Salir </a>
+        </li>
+    
+      </ul>
+    </aside>
+    <section id="contents">
+      
+      <div class="welcome">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="content">
+                <h2>Bienvenido</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="statistics">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="box">
+                <i class="far fa-building fa-fw bg-primary"></i>
+                <div class="info">
+                  <h3>12</h3>
+                  <span>Empresas</span>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <i class="fab fa-product-hunt fa-fw danger"></i>
+                
+                <div class="info">
+                  <h3>34</h3>
+                  <span>Productos</span>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <i class="fas fa-money-bill-alt fa-fw success"></i>
+                <div class="info">
+                  <h3>100</h3>
+                  <span>Ventas</span>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="charts">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="chart-container">
+                <h3>Ventas del Mes</h3>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="chart-container">
+                <h3>Historial de tickets</h3>
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statis text-center">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="box bg-primary">
+                <i class="fa fa-eye"></i>
+                <h3>4</h3>
+                <p class="lead">Tickets Abiertos</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box danger">
+                <i class="fas fa-times-circle"></i>
+                <h3>8</h3>
+                <p class="lead">Tickets Cerrados</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box warning">
+                <i class="fas fa-thumbtack"></i>
+                <h3>10</h3>
+                <p class="lead">Tickets en Proceso</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box success">
+                <i class="fas fa-history"></i>
+                <h3>22</h3>
+                <p class="lead">Total Tickets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
